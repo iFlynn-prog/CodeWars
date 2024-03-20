@@ -21,17 +21,40 @@ public class MainApp {
 //        System.out.println(Arrays.toString(stringToArray(s)));
 //        System.out.println(countingSheep(10));
 //        System.out.println(getXO("ooxxx"));
-
+//        System.out.println(switchItUp(9));
+//        System.out.println(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
 
     }
+
+    public static String noSpace(final String x) {
+        return x.replaceAll("\\s+","");
+    }
+    public static String switchItUp(int number) {
+        return switch (number) {
+            case (0) -> "Zero";
+            case (1) -> "One";
+            case (2) -> "Two";
+            case (3) -> "Three";
+            case (4) -> "Four";
+            case (5) -> "Five";
+            case (6) -> "Six";
+            case (7) -> "Seven";
+            case (8) -> "Eight";
+            case (9) -> "Nine";
+            default -> "Number not found";
+        };
+    }
+
     public static boolean validatePin(String pin) {
         // Your code here...
         return true;
     }
+
     public static int goals(int laLigaGoals, int copaDelReyGoals, int championsLeagueGoals) {
-        int sum = laLigaGoals + copaDelReyGoals + championsLeagueGoals;;
+        int sum = laLigaGoals + copaDelReyGoals + championsLeagueGoals;
         return sum;
     }
+
     public static boolean getXO(String str) {
         char[] words = str.toCharArray();
         System.out.println(Arrays.toString(words));
